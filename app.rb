@@ -34,7 +34,7 @@ get "/events/:id" do
     @rsvps = rsvps_table.where(event_id: @event[:id]).to_a
     @going_count = rsvps_table.where(event_id: @event[:id], going: true).count
     view "event"
-end
+end 
 
 get "/events/:id/rsvps/new" do
     puts "params: #{params}"
