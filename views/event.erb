@@ -14,13 +14,17 @@
                     <i class="fas fa-thumbs-down fa-3x mr-3"></i>
                 <% end %>
                 <div class="media-body">
-                    <h5 class="mt-0"><%= rsvp[:name] %></h5>
+                    <h5 class="mt-0"><%= @users_table.where(id: rsvp[:user_id]).to_a[0][:name] %></h5>
                     <%= rsvp[:comments] %>
                 </div>
             </div>
         <% end %>
         <p class="mt-5">
-            <a href="/events/<%= @event[:id] %>/rsvps/new" class="btn btn-primary">RSVP now!</a>
+            <% if @current_user %>
+                <a href="/events/<%= @event[:id] %>/rsvps/new" class="btn btn-primary">RSVP now!</a>
+            <% else %>
+                <a href="/logins/new" class="btn btn-danger">Please sign in to RSVP</a>
+            <% end %>
         </p>
     </div>
     <div class="col-sm-3">
