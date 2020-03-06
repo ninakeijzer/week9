@@ -78,7 +78,7 @@ post "/logins/create" do
         view "create_login_failed"
     end
 end
-
+ 
 get "/logout" do
     session["user_id"] = nil
     @current_user = nil
