@@ -46,14 +46,12 @@ end
 # Insert initial (seed) data
 events_table = DB.from(:events)
 
-events_table.insert(title: "Bacon Burger Taco Fest", 
-                    description: "Here we go again bacon burger taco fans, another Bacon Burger Taco Fest is here!",
-                    date: "June 21",
-                    location: "Kellogg Global Hub")
+events_table.insert(title: "Rescue grocery perishables", 
+                    description: "Every day of the week, Valli's offers packages of fresh produce that are close to losing their freshness. Each package costs $1.49, content of the packages vary depending on what needs to go!",
+                    location: "Valli Produce, Evanston")
 
-events_table.insert(title: "Kaleapolooza", 
-                    description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
-                    date: "July 4",
-                    location: "Nowhere")
+events_table.insert(title: "Recycle your grocery plastic bags", 
+                    description: "Jewel Osco collects used plastic grocery bags and gives them a new meaningful life.",
+                    location: "Jewel Osco, Evanston")
 
                     puts "success!"
